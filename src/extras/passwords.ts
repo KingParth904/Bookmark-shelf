@@ -1,0 +1,1 @@
+ export const jwt_passkey = "123brainly123";

@@ -7,4 +7,5 @@ export enum ResponseStatus {
   NotFound = 404,
   Conflict = 409,
   Error = 500,
+  BadCredentitals = 411,
 }
