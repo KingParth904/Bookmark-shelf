@@ -74,7 +74,7 @@ const passmatch = await bcrypt.compare(password, existinguser.password);
   }
 });
 
-app.post("/api/v1/content",userMiddleware , async (req : AuthenticatedRgit equest,res)=>{
+app.post("/api/v1/content",userMiddleware , async (req : AuthenticatedRequest,res)=>{
      const { title, link, type } = req.body;
 
     try {
