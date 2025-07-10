@@ -1,1 +1,1 @@
-{"root":["./src/db.ts","./src/index.ts","./src/middleware.ts","./src/extras/statuscodes.enum.ts","./src/extras/passwords.ts","./src/extras/zodschema.ts"],"version":"5.8.3"}
+{"root":["./src/db.ts","./src/index.ts","./src/middleware.ts","./src/extras/statuscodes.enum.ts","./src/extras/passwords.ts","./src/extras/utils.ts","./src/extras/zodschema.ts"],"version":"5.8.3"}

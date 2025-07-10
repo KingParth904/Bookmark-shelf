@@ -21,7 +21,7 @@ const TagSchema = new Schema({
 
 const LinkSchema = new Schema({
     hash : String,
-    userId : {type:  mongoose.Types.ObjectId , ref:'Users'} 
+    userId : {type:  mongoose.Types.ObjectId , ref:'Users' , required :true , unique : true} 
 })
 
 
