@@ -10,8 +10,8 @@ const UserSchema = new Schema({
 const ContentSchema = new Schema({
     title : String,
     link : String,
-    type : {type:String , enum :  ['video', 'article', 'image', 'other'] , required:true } ,
-    tags : [{type:mongoose.Types.ObjectId , ref:'Tags' , required : true}],
+    type : {type:String , enum :  ['twitter', 'youtube'] , required:true } ,
+    tags : [{type:mongoose.Types.ObjectId , ref:'Tags' }],
     userId : {type: mongoose.Types.ObjectId , ref :'Users', required:true}
 })
 

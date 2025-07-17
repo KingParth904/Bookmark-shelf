@@ -9,9 +9,11 @@ import { jwt_passkey } from "./extras/passwords";
 import { userMiddleware } from "./middleware";
 import { AuthenticatedRequest } from "./middleware";
 import { randomString } from "./extras/utils";
+import cors from "cors"
 
 const app  = express();
 app.use(express.json());
+app.use(cors());
 
 import { ZodError } from 'zod';
 
@@ -123,8 +125,8 @@ app.get("/api/v1/content", userMiddleware, async (req: AuthenticatedRequest, res
 
 app.delete("/api/v1/content",userMiddleware, async (req:AuthenticatedRequest,res)=>{
     const contentId = req.body.contentId;
-    await ContentModel.deleteMany({
-        contentId,
+    await ContentModel.deleteOne({
+        _id: contentId,
         userId : req.userId
     })
     res.json({
