@@ -191,7 +191,9 @@ app.get("/api/v1/bookmarks/:shareLink", async (req, res) => {
 async function main(){
     await mongoose.connect("mongodb+srv://parthsadotra33:39ipoDAz6BXZUiSB@cluster0.5ypptcz.mongodb.net/bookmark-shelf");
     console.log("Server Started");
-    app.listen(3000);
+    const PORT = process.env.PORT || 3000;
+      app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+
 }
 
 main(); 
